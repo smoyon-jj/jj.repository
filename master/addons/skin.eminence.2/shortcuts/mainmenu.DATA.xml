@@ -1,0 +1,82 @@
+<shortcuts>
+	<shortcut>
+		<defaultID>hospital</defaultID>
+		<label>60009</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb>special://skin/extras/icons/location-star.png</thumb>
+		<action>StartAndroidActivity(de.ozerov.fully,android.intent.action.VIEW,,https://jane-jobs.com)</action>
+		</shortcut>
+	<shortcut>
+		<defaultID>weather</defaultID>
+		<label>12600</label>
+		<label2>Common menu item</label2>
+		<icon>special://skin/extras/icons/sun.png</icon>
+		<thumb />
+		<action>ActivateWindow(Weather)</action>
+		</shortcut>
+	<shortcut>
+		<defaultID>phone</defaultID>
+		<label>60018</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb>special://skin/extras/icons/phone.png</thumb>
+		<action>StartAndroidActivity(org.linphone)</action>
+		</shortcut>
+	<shortcut>
+		<defaultID>tv</defaultID>
+		<label>60008</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb>special://skin/extras/icons/tv.png</thumb>
+		<action>ActivateWindow(TVChannels)</action>
+		</shortcut>
+	<shortcut>
+		<defaultID>internet</defaultID>
+		<label>60007</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb>special://skin/extras/icons/world.png</thumb>
+		<action>SetFocus(9002)</action>
+		</shortcut>
+	<shortcut>
+		<defaultID>apps</defaultID>
+		<label>60006</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb>special://skin/extras/icons/android.png</thumb>
+		<action>SetFocus(9002)</action>
+		</shortcut>
+	<shortcut>
+		<defaultID>vodmusic</defaultID>
+		<label>60005</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb>special://skin/extras/icons/sets.png</thumb>
+		<action>SetFocus(9002)</action>
+		</shortcut>
+	<shortcut>
+		<defaultID>relaxation</defaultID>
+		<label>60004</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb>special://skin/extras/icons/top100.png</thumb>
+		<action>SetFocus(9002)</action>
+		</shortcut>
+	<shortcut>
+		<defaultID>language</defaultID>
+		<label>60003</label>
+		<label2>Custom item</label2>
+		<icon>DefaultShortcut.png</icon>
+		<thumb>special://skin/extras/icons/DefaultAddonLanguage.png</thumb>
+		<action>SetFocus(9002)</action>
+		</shortcut>
+	<shortcut>
+		<defaultID>settings</defaultID>
+		<label>10004</label>
+		<label2>Common menu item</label2>
+		<icon>special://skin/extras/icons/settings.png</icon>
+		<thumb />
+		<action>ActivateWindow(Settings)</action>
+		</shortcut>
+	</shortcuts>

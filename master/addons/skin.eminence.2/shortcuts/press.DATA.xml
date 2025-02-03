@@ -1,0 +1,16 @@
+<shortcuts>
+	<shortcut>
+		<label>New Strait Times</label>
+		<label2></label2>
+		<icon>DefaultFolder.png</icon>
+		<thumb />
+		<action>StartAndroidActivity(team.vc.nstnews)</action>
+		</shortcut>
+	<shortcut>
+		<label>The Star</label>
+		<label2></label2>
+		<icon></icon>
+		<thumb />
+		<action>StartAndroidActivity(com.knx.thestarmobile)</action>
+		</shortcut>
+	</shortcuts>

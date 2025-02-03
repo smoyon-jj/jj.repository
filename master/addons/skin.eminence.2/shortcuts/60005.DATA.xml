@@ -1,0 +1,26 @@
+<shortcuts>
+	<shortcut>
+		<defaultID />
+		<label>Spotify</label>
+		<label2>Custom item</label2>
+		<icon>https://raw.githubusercontent.com/smassot-jj/playlist.popcorn/refs/heads/main/application-logos/com-spotify-music-app.png</icon>
+        <thumb /> 
+		<action>StartAndroidActivity(com.spotify.music)</action>
+	</shortcut>	
+	<shortcut>
+		<defaultID />
+		<label>Youtube</label>
+		<label2>Custom item</label2>
+		<icon>https://raw.githubusercontent.com/smassot-jj/playlist.popcorn/refs/heads/main/application-logos/com-google-android-youtube-app.png</icon>
+        <thumb /> 
+		<action>StartAndroidActivity(com.google.android.youtube)</action>
+	</shortcut>		
+	<shortcut>
+		<defaultID />
+		<label>Netflix</label>
+		<label2>Custom item</label2>
+		<icon>https://raw.githubusercontent.com/smassot-jj/playlist.popcorn/refs/heads/main/application-logos/com-netflix-mediaclient-app.png</icon>
+        <thumb /> 
+		<action>StartAndroidActivity(com.netflix.mediaclient)</action>
+	</shortcut>				
+</shortcuts>

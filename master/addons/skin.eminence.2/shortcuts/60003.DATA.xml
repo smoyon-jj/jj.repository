@@ -1,0 +1,34 @@
+<shortcuts>
+	<shortcut>
+		<defaultID />
+		<label>60013</label>
+		<label2>Custom item</label2>
+		<icon>https://raw.githubusercontent.com/smassot-jj/playlist.popcorn/refs/heads/main/countries-logos/en.png</icon>
+		<thumb />
+		<action>SetGUILanguage(resource.language.en_gb)</action>
+		</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>60014</label>
+		<label2>Custom item</label2>
+		<icon>https://raw.githubusercontent.com/smassot-jj/playlist.popcorn/refs/heads/main/countries-logos/fr.png</icon>
+		<thumb />
+		<action>SetGUILanguage(resource.language.fr_fr)</action>
+		</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>60019</label>
+		<label2>Custom item</label2>
+		<icon>https://raw.githubusercontent.com/smassot-jj/playlist.popcorn/refs/heads/main/countries-logos/de.png</icon>
+		<thumb />
+		<action>SetGUILanguage(resource.language.fr_fr)</action>
+		</shortcut>
+	<shortcut>
+		<defaultID />
+		<label>60015</label>
+		<label2>Custom item</label2>
+		<icon>https://raw.githubusercontent.com/smassot-jj/playlist.popcorn/refs/heads/main/countries-logos/es.png</icon>
+		<thumb />
+		<action>SetGUILanguage(resource.language.es_es)</action>
+		</shortcut>	
+	</shortcuts>

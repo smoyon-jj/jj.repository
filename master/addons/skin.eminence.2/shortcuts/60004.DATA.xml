@@ -1,0 +1,23 @@
+<shortcuts>
+	<shortcut>
+		<label>60016</label>
+		<label2>Custom item</label2>
+		<icon>https://raw.githubusercontent.com/smassot-jj/playlist.popcorn/refs/heads/main/videos-logos/bol-tibetain-vid.png</icon>
+		<thumb />
+		<action>StartAndroidActivity(de.ozerov.fully,android.intent.action.VIEW,,https://www.youtube.com/embed/0-g1zPWQPHk?autoplay=1)</action> 
+<!--
+		<action>PlayMedia(/sdcard/DCIM/janejobs/media/movie/Tibetan.mp4)</action>
+-->
+		</shortcut>
+        <shortcut>                                                        
+        <label>60017</label>                                  
+		<label2>Custom item</label2>
+		<icon>https://raw.githubusercontent.com/smassot-jj/playlist.popcorn/refs/heads/main/videos-logos/coherence-cardiaque-vid.png</icon>
+        <thumb />               
+        <action>StartAndroidActivity(de.ozerov.fully,android.intent.action.VIEW,,https://www.youtube.com/embed/XqwCr1qISd4?autoplay=1)</action> 
+<!--
+		<action>PlayMedia(/sdcard/DCIM/janejobs/media/movie/Cardiac.mp4)</action>
+-->
+        </shortcut> 	
+
+	</shortcuts>

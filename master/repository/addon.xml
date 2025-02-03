@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="repository.jane.jobs" name="Repository Jane Jobs" version="1.0.0" provider-name="Jane Jobs">
+    <requires>
+        <!-- Exemple de dépendance vers xbmc.python, à ajuster selon votre repository -->
+        <import addon="xbmc.python" version="2.26.0"/>
+    </requires>
+    <extension point="janejobs.addon.repository">
+        <!-- Répertoire contenant le fichier addons.xml -->
+        <dir>repository</dir>
+        <!-- URL de l'addons.xml du repository ; l'attribut "compressed" indique si le fichier est compressé -->
+        <info compressed="false">https://github.com/Eviloid/kodi.repository/raw/master/addons.xml</info>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="fr_FR">Exemple de repository Kodi</summary>
+        <description lang="fr_FR">
+            Ceci est un repository d'addons pour Kodi. Vous pouvez y retrouver divers addons développés par notre équipe.
+        </description>
+        <platform>all</platform>
+    </extension>
+</addon>
+

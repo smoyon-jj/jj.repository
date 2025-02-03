@@ -1,0 +1,26 @@
+<shortcuts>
+	<shortcut>
+		<defaultID>mirror</defaultID>
+		<label>60010</label>
+		<label2>Custom item</label2>
+		<icon />
+		<thumb />
+		<action>StartAndroidActivity(com.smarttoolsdev.mirrorapp)</action>
+		</shortcut>
+	<shortcut>
+		<defaultID>whiteboard</defaultID>
+		<label>60011</label>
+		<label2>Custom item</label2>		
+		<icon />
+		<thumb />
+		<action>StartAndroidActivity(cn.readpad.whiteboard)</action>
+		</shortcut>
+	<shortcut>
+		<defaultID>moreapps</defaultID>
+		<label>60012</label>
+		<label2>Custom item</label2>
+		<icon />
+		<thumb />
+		<action>ActivateWindow(Programs, AndroidApps, return)</action>
+		</shortcut>
+	</shortcuts>

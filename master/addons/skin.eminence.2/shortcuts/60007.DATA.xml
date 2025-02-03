@@ -1,0 +1,23 @@
+<shortcuts>
+	<shortcut>
+		<label>Google</label>
+		<label2>Custom item</label2>
+		<icon>https://raw.githubusercontent.com/smassot-jj/playlist.popcorn/refs/heads/main/internet-logos/google-int.png</icon>
+		<thumb />
+		<action>StartAndroidActivity(de.ozerov.fully,android.intent.action.VIEW,,https://google.com)</action>
+		</shortcut>
+	<shortcut>
+		<label>Wikipedia</label>
+		<label2>Custom item</label2>
+		<icon>https://raw.githubusercontent.com/smassot-jj/playlist.popcorn/refs/heads/main/internet-logos/wikipedia-int.png</icon>
+		<thumb />
+		<action>StartAndroidActivity(de.ozerov.fully,android.intent.action.VIEW,,https://wikipedia.com)</action>
+		</shortcut>
+	<shortcut>
+		<label>Amazon</label>
+		<label2>Custom item</label2>
+		<icon>https://raw.githubusercontent.com/smassot-jj/playlist.popcorn/refs/heads/main/internet-logos/amazon-int.png</icon>
+		<thumb />
+		<action>StartAndroidActivity(de.ozerov.fully,android.intent.action.VIEW,,https://amazon.com)</action>
+		</shortcut>
+	</shortcuts>

@@ -1,0 +1,37 @@
+<shortcuts>
+	<shortcut>
+		<label>Facebook</label>
+		<label2></label2>
+		<icon>DefaultFolder.png</icon>
+		<thumb />
+		<action>StartAndroidActivity(com.facebook.katana)</action>
+		</shortcut>
+	<shortcut>
+		<label>Youtube</label>
+		<label2></label2>
+		<icon></icon>
+		<thumb />
+		<action>StartAndroidActivity(de.ozerov.fully,android.intent.action.VIEW,,https://youtube.com)</action>
+		</shortcut>
+	<shortcut>
+		<label>Instagram</label>
+		<label2></label2>
+		<icon></icon>
+		<thumb />
+		<action>StartAndroidActivity(com.instagram.android)</action>
+		</shortcut>
+        <shortcut>         
+                <label>Telegram</label>
+                <label2></label2>       
+                <icon></icon>                   
+                <thumb />    
+                <action>StartAndroidActivity(org.telegram.messenger)</action>
+                </shortcut> 
+        <shortcut>                                                        
+                <label>Linkedin</label>                                  
+                <label2></label2>                                         
+                <icon></icon>                                             
+                <thumb />               
+                <action>StartAndroidActivity(de.ozerov.fully,android.intent.action.VIEW,,https://linkedin.com)</action>
+                </shortcut> 	
+	</shortcuts>
