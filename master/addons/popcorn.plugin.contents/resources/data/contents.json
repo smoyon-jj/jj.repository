@@ -40,16 +40,6 @@
         "dataURI" : "https://www.amazon.fr"
     }, 
     {
-        "category": "internet",
-        "type": "file",
-        "title": "Préparation à la naissance",
-        "description": "ouverture avec browser.",
-        "image": "https://raw.githubusercontent.com/smassot-jj/playlist.popcorn/refs/heads/main/internet-logos/le-soir-int.png",
-        "package": "de.ozerov.fully",
-        "intent": "android.intent.action.VIEW",
-        "dataURI" : "https://www.chu-montpellier.fr/fileadmin/medias/Pages/patients-visiteurs/Education-therapeutique/08-Publications-UTEP/Femmes-enceintes-RIQUET-ETP-TPE-2022.pdf"
-    },    
-    {
         "category": "radio",
         "type": "music",
         "title": "Bel RTL",

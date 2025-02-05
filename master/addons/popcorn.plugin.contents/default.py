@@ -18,7 +18,7 @@ addon = xbmcaddon.Addon("popcorn.plugin.contents")
 #
 # A définir dans l'action du menu
 #
-# xbmc.executebuiltin('ActivateWindow(Videos,"plugin://plugin.video.monplugin?action=list&category=internet",return)')
+# xbmc.executebuiltin('ActivateWindow(Videos,"plugin://plugin.video.monplugin?action=list&amp;category=internet",return)')
 #
 #---------------------------------
 
@@ -39,7 +39,6 @@ def load_resources_from_json(file_path, file_path_local):
             if file_path.startswith("http://") or file_path.startswith("https://"):
                 # Télécharger le fichier depuis l'URL
                 urllib.request.urlretrieve(file_path, file_path_local)
-                xbmcgui.Dialog().notification("Info", f"Fichier copié de {file_path} vers {file_path_local}", xbmcgui.NOTIFICATION_INFO, 5000)
             else:
                 if not os.path.exists(file_path):
                     xbmcgui.Dialog().notification("Erreur", f"Fichier JSON introuvable : {str(file_path)}", xbmcgui.NOTIFICATION_ERROR, 5000)
@@ -48,7 +47,6 @@ def load_resources_from_json(file_path, file_path_local):
                 # Copier le fichier vers l'emplacement donné
                 #if not file_path == file_path_local:
                 shutil.copy(file_path, file_path_local)
-                xbmcgui.Dialog().notification("Info", f"Fichier copié de {file_path} vers {file_path_local}", xbmcgui.NOTIFICATION_INFO, 5000)
 
         # Charger le fichier JSON local        
         with open(file_path_local, 'r', encoding='utf-8') as file:
@@ -64,7 +62,6 @@ def load_resources_from_json(file_path, file_path_local):
 # si non trouvé dans le fichier settings.xml alors on utilise la conf par défaut du plugin
 contents_file = addon.getSetting("contents_file_path") or "special://home/addons/popcorn.plugin.contents/resources/data/contents.json"
 if contents_file:
-    xbmcgui.Dialog().notification("Setting récupéré", f"Valeur {contents_file}", xbmcgui.NOTIFICATION_INFO, 3000)
     contents = load_resources_from_json(contents_file,"special://userdata/addon_data/popcorn.plugin.contents/resources/data/contents.json")
 else:
     xbmcgui.Dialog().notification("Setting non récupéré", f"Pas de setting trouvé pour {contents_file}", xbmcgui.NOTIFICATION_INFO, 3000)
@@ -72,7 +69,6 @@ else:
 # si non trouvé dans le fichier settings.xml alors on utilise la conf par défaut du plugin
 categories_file = addon.getSetting("categories_file_path") or "special://home/addons/popcorn.plugin.contents/resources/data/categories.json"
 if categories_file:
-    xbmcgui.Dialog().notification("Setting récupéré", f"Valeur {categories_file}", xbmcgui.NOTIFICATION_INFO, 3000)
     categories = load_resources_from_json(categories_file,"special://userdata/addon_data/popcorn.plugin.contents/resources/data/categories.json")
 else:
     xbmcgui.Dialog().notification("Setting non récupéré", f"Pas de setting trouvé pour {categories_file}", xbmcgui.NOTIFICATION_INFO, 3000)
@@ -104,7 +100,6 @@ def list_contents(filter_category=None):
                 xbmcgui.Dialog().notification("Erreur", f"Catégorie invalide : {filter_category}", xbmcgui.NOTIFICATION_ERROR, 3000)
                 return
             else:
-                xbmcgui.Dialog().notification("Info", f"Catégorie en cours : {filter_category}", xbmcgui.NOTIFICATION_INFO, 3000)
                 # Récupération des détails de la catégorie
                 category_details = get_category_details(filter_category)
                 
@@ -128,9 +123,9 @@ def list_contents(filter_category=None):
                     """on ouvre avec l'explorateur"""
                     url = f"{sys.argv[0]}?action=open&type={content['type']}&package={content['package']}&intent={content['intent']}&dataURI={content['dataURI']}"
                 elif content["type"] == "music":
-                    url = f"{sys.argv[0]}?action=open&type={content['type']}&dataURI={content.get('dataURI', '')}"
+                    url = f"{sys.argv[0]}?action=open&type={content['type']}&dataURI={content['dataURI']}"
                 elif content["type"] == "file":
-                    url = f"{sys.argv[0]}?action=open&type={content['type']}&dataURI={content.get('dataURI', '')}"
+                    url = f"{sys.argv[0]}?action=open&type={content['type']}&dataURI={content['dataURI']}"
                 elif content["type"] == "application":
                     url = f"{sys.argv[0]}?action=open&type={content['type']}&package={content['package']}"
 
@@ -151,19 +146,17 @@ def list_contents(filter_category=None):
 
 def launch_android_app(package, intent=None, dataURI=None):
     """Lance une application Android via StartAndroidActivity."""
-    if intent:
-        if dataURI:
-            xbmc.executebuiltin(f"StartAndroidActivity({package},{intent},{dataURI})")
+    try:
+        if intent:
+            if dataURI:
+                xbmc.executebuiltin(f"StartAndroidActivity({package},{intent},,{dataURI})")
+            else:
+                xbmc.executebuiltin(f"StartAndroidActivity({package},{intent})")
         else:
-            xbmc.executebuiltin(f"StartAndroidActivity({package},{intent})")
-    else:
-        xbmc.executebuiltin(f"StartAndroidActivity({package})")
-    xbmcgui.Dialog().notification("Lancement", f"StartAndroidActivity({package},{intent},{dataURI})", xbmcgui.NOTIFICATION_INFO, 3000)
-
-
-def open_website(dataURI):
-    """Ouvre le site web dans le navigateur par défaut."""
-    webbrowser.open(dataURI)
+            xbmc.executebuiltin(f"StartAndroidActivity({package})")
+        xbmcgui.Dialog().notification("Lancement", f"StartAndroidActivity({package},{intent},,{dataURI})", xbmcgui.NOTIFICATION_INFO, 3000)
+    except Exception as e:
+        xbmcgui.Dialog().notification("Erreur", f"Impossible de faire un StartAndroidActivity : {str(e)}", xbmcgui.NOTIFICATION_ERROR, 3000)
 
 
 def play_music(dataURI):
@@ -200,7 +193,6 @@ def open_file(package, intent=None, dataURI=None):
         Archive file types (.ZIP and .RAR)."""
     url = f"http://docs.google.com/viewer?url={dataURI}&embedded=true"
     launch_android_app({package}, {intent}, url)
-
 
 
 
